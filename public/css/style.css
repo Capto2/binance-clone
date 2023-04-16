@@ -1,83 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,900;1,100;1,300;1,800&display=swap");
-
 * {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  outline: none;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif, serif, Arial, Helvetica;
 }
-
 body {
   width: 100%;
-  height: 100vh;
+  display: block;
 }
-
-.hide {
-  display: none;
+div.container {
+  width: 100%;
+  height: max-content;
+  display: block;
 }
-.uppercase {
-  text-transform: uppercase;
-}
-.lowercase {
-  text-transform: lowercase;
-}
-
 header {
-  vertical-align: baseline;
-  text-align: start;
+  display: block;
   color: #000000;
   background-color: #2b3139;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 24px;
   text-indent: 0px;
-  padding: 1rem 0px;
+  font-style: normal;
+  font-variant: normal;
+  padding: 16px 0px;
 }
-
-header div.header {
+header div.text {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: #fff;
   margin: 0px 63px;
   padding: 0px 24px;
-  vertical-align: baseline;
   line-height: 24px;
-}
-
-header div p {
+  vertical-align: baseline;
   font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: normal;
-  word-spacing: normal;
 }
-
-header div p span#location {
+header div.text p {
+  display: block;
+  text-align: start;
+  color: #ffffff;
+  margin: 0px 16px 0px 0px;
+}
+header div.text p span#location {
   color: #c99400;
   font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
 }
-
-header div div.btn {
+header div.text span.btn {
   padding: 0px 16px;
+  border-radius: 2px;
   color: #e6e8ea;
   background-color: #474d57;
   font-size: 12px;
+  font-weight: 400;
   vertical-align: baseline;
-  margin: 0px 15px;
-  border-radius: 4px;
-  text-transform: capitalize;
-}
-
-header div span.material-symbols-sharp {
-  margin: 0px 0px 0px 16px;
   line-height: 24px;
-  color: #76808f;
+  letter-spacing: normal;
+  text-transform: capitalize;
   cursor: pointer;
-  font-size: 25px;
 }
+header div.text span.material-symbols-sharp {
+  color: #76808f;
+  margin: 0px 0px 0px 16px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 24px;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+/* End Header style */
 
+/* Starter header style */
 nav {
   line-height: 18.4px;
   vertical-align: baseline;
@@ -89,7 +86,6 @@ nav {
   align-items: center;
   height: 65px;
 }
-
 nav a img {
   display: block;
   width: 155px;
@@ -97,7 +93,6 @@ nav a img {
   cursor: pointer;
   margin: 0px -15px;
 }
-
 nav div.nav-list {
   display: flex;
   flex-direction: row;
@@ -110,7 +105,6 @@ nav div.nav-list {
   padding: 18px 5px;
   color: #6b6e72;
 }
-
 nav div.nav-list div.nav-list-item {
   display: flex;
   flex-direction: row;
@@ -123,7 +117,6 @@ nav div.nav-list div.nav-list-item {
   text-transform: capitalize;
   text-align: start;
 }
-
 nav span,
 nav a {
   font-size: 14px;
@@ -131,15 +124,12 @@ nav a {
   color: #6b6e72;
   text-transform: capitalize;
 }
-
 nav span:hover {
   color: #c99400;
 }
-
 nav a:hover {
   color: #c99400;
 }
-
 nav div.nav-list div.nav-list-item span.currency {
   vertical-align: baseline;
   letter-spacing: normal;
@@ -154,7 +144,6 @@ nav div.nav-list div.nav-list-item span.currency {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
-
 nav div.aouth a.nav-list-item {
   display: flex;
   flex-direction: row;
@@ -164,7 +153,6 @@ nav div.aouth a.nav-list-item {
   word-spacing: 0px;
   padding: 6px 12px;
 }
-
 nav div.aouth a.box {
   background-color: #fcd535;
   border-radius: 3px;
@@ -174,15 +162,12 @@ nav div.aouth a.box {
   align-items: center;
   justify-items: start;
 }
-
 nav div.aouth a.box svg {
   margin: 0px 2px;
 }
-
 nav span.material-symbols-sharp {
   color: #707a8a;
 }
-
 nav div.last {
   line-height: 16.1px;
   vertical-align: baseline;
@@ -194,16 +179,13 @@ nav div.last {
   align-items: center;
   color: #1e2329;
 }
-
 nav div.last:hover {
   color: #c99400;
 }
-
 nav div.last svg {
   padding: 0px 8px;
   color: #1e2329;
 }
-
 nav div.last span.currency {
   text-transform: uppercase;
   padding: 0px 8px;
@@ -212,7 +194,6 @@ nav div.last span.currency {
   border-left: 1px solid #2b3139;
   border-right: 1px solid #2b2b2b;
 }
-
 nav div.last span.moon {
   float: end;
   padding: 0px 2px;
@@ -220,11 +201,14 @@ nav div.last span.moon {
   color: #1e2329;
   font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
 }
-
 nav div.last span.moon:hover {
   color: #c99400;
 }
 
+/* nav bar style end */
+main {
+  display: block;
+}
 main div.top {
   font-size: 1rem;
   font-weight: 400;
@@ -233,7 +217,6 @@ main div.top {
   background-color: #fef6d8;
   display: block;
 }
-
 main div.top a {
   display: flex;
   flex-direction: row;
@@ -249,12 +232,10 @@ main div.top a {
   color: #6b6e72;
   font-size: 14px;
 }
-
 main div.top a svg {
   margin: 0px 8px 0px 0px;
   color: #f0b90b;
 }
-
 main div.top a span.box {
   line-height: 1rem;
   vertical-align: baseline;
@@ -270,30 +251,99 @@ main div.top a span.box {
   text-align: start;
   text-transform: capitalize;
 }
-
-main div.container{
-  padding: 0px 24px;
-  margin: 0px 50.5px;
-  line-height: 18.4px;
+main div.main {
+  padding: 80px 100px 0px;
+  display: grid;
+  grid-template-rows: 3rem auto 3rem;
 }
-main div.container div.css-1ig7ggv{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-div.container div.css-1ig7ggv div.css-1lpyr85{
+main div.main img {
+  width: 100%;
+  border-radius: 25px;
   display: block;
+  text-align: center;
+  margin: 2rem 0px;
 }
-main div.container div.css-1ig7ggv img.css-115de20{
-  width: 75%;
-  height: 45vh;
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 2rem 0px;
+}
+p {
+  margin: 1.5rem 0;
+  line-break: auto;
+  line-height: 25px;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 1.8rem 0;
+}
+
+h4 {
+  text-transform: capitalize;
+  margin: 1.8rem 0;
+}
+
+p span {
+  font-weight: bold;
+}
+ol {
+  list-style-type: none;
+}
+ol li {
+  margin: 1rem 0rem;
+}
+ol li span {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+main div.main ul {
+  list-style-type: disc;
+  color: #559755;
+}
+
+ul li {
+  border: 1px solid #093809e7;
+  margin: 0.85rem 0;
+  padding: 0.5rem 2px;
+}
+
+ul li a span {
+  background-color: #093809e7;
+  padding: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+ul li a:hover span {
+  color: #093809e7;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+ul li a span.btn {
+  margin-left: 2px;
+  background-color: #fff;
+  color: #093809e7;
+  border: 1.5px solid #093809e7;
+  padding: 0.4rem;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+ul li a span.btn:hover {
+  background-color: #093809e7;
+  color: #fff;
 }
 footer {
   line-height: 18.4px;
   letter-spacing: normal;
   word-spacing: 0px;
-  padding: 20px;
+  padding: 48px 20px;
   display: block;
 }
 footer div.main {
@@ -373,4 +423,14 @@ footer div.bottom p {
   color: #707a8a;
   vertical-align: baseline;
   text-transform: capitalize;
+  text-transform: capitalize;
 }
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+/* End of index style */
+
+/* Responsiveness style */

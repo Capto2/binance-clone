@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  appearance: none;
+  user-select: none;
+  font-family: sans-serif, "Poppins", "Times New Roman", Times, serif;
+}
+
+body {
+  height: 100vh;
+}
+
+div.container {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.container img#img {
+  margin-top: -5%;
+  width: 35%;
+  display: block;
+  text-align: center;
+}
+
+div.container div.container-box {
+  margin-bottom: 2rem;
+  width: 80%;
+  background-color: #060427;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+}
+p {
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-break: auto;
+  line-height: 30px;
+}
+h2 {
+  text-transform: capitalize;
+  color: #7c7cd6;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+ul {
+  margin: 0 2rem;
+}
+ul li {
+  padding: 1rem 0;
+}
+ul li span {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+input {
+  cursor: pointer;
+}
+div.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.container div.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div.container div.form div.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  margin: 2rem;
+}
+div.form div.input-group div.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+div.form div.input-group div.input img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 10px;
+}
+div.form div.input-group div.input label {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 600;
+}
+div.form div.input-group div.input div.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+  padding-left: 8px;
+  height: 3rem;
+  width: 20rem;
+}
+div.form div.input-group div.input div.input-box input {
+  height: 3rem;
+  width: 20rem;
+  outline: none;
+  border: none;
+}
+div.form div.input-group span {
+  margin: 0px 4rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #817a7a;
+  font-weight: 500;
+}
+div.form div.input-group div.input span.warning {
+  font-size: .888rem;
+  font-weight: 400;
+  font-style: normal;
+  text-align: start;
+  color: red;
+  margin-top: -.1rem;
+  margin-right: -6rem;
+  line-height: 18.8px;
+  display: none;
+}
+
+div.box div.form div.input-address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 2px;
+}
+div.box div.form div.input-address input[type=text]{
+  width: 35vw;
+  height: 3rem;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+}
+div.form div.input-address label {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 5px 0px;
+}
+div.box button {
+  background-color: #3486b6fb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  text-transform: capitalize;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+div.box a {
+  color: #3486b6fb;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 3rem 0;
+}
+div.ads {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+div.ads div.ads-set {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 2px;
+}
+div.ads div.ads-set div.ads-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  width: 16rem;
+  margin: 1px 4px;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+}
+div.ads div.ads-set div.ads-box img {
+  width: 2rem;
+  height: 1.6rem;
+  margin-right: 5px;
+}
+
+/* Payment style */
+
+div.prompt-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+div.prompt-box img {
+  display: block;
+  text-align: center;
+  width: 40%;
+  height: auto;
+  margin: 15px 0px;
+  border-radius: 10px;
+}
+div.prompt-box span {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 4px;
+}
+div.prompt div.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* spinner load */
+div.payment-page .lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #c99400;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
