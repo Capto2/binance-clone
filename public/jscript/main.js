@@ -22,39 +22,66 @@ function bonusCalculation() {
   amount = parseFloat(amount);
   console.log(amount);
   bonus.value = amount * 2;
-  if(amount <= _lessThan){
+  if (amount <= _lessThan) {
     warning.style.display = "block";
     warning.innerHTML = `The minimum deposit amount is ${_lessThan}`;
     warning.style.color = "red";
+    warning.style.marginLeft = "-1px";
+    warning.style.textAlign = "start";
     warning.style.marginTop = "10px";
     genBtn.style.backgroundColor = "grey";
     genBtn.disabled = true;
   }
-  else if(amount > _greaterThan){
+  else if (amount > _greaterThan) {
     warning.style.display = "block";
-    warning.style.marginTop = "10px"; 
+    warning.style.marginTop = "10px";
     warning.innerHTML = `The maximum deposit amount is ${_greaterThan}`;
     warning.style.color = "red";
+    warning.style.marginLeft = "-1px";
+    warning.style.textAlign = "start";
     genBtn.style.backgroundColor = "grey";
     genBtn.disabled = true;
   }
-  else{
+  else {
     warning.style.display = "none";
     genBtn.disabled = false;
     genBtn.style.backgroundColor = "#3486b6fb";
   }
 }
-function amountPaymentPrompt(){
+function amountPaymentPrompt() {
 
 }
-function emptyBox(){
-  const amount = document.querySelector(".amount").value;
-  let amountLenght = amount.lenght;
-  console.log(amountLenght);
+function emptyBox() {
+  let amount = document.querySelector(".amount").value;
+  const amountLenght = amount.toString().length;
+  let userAddress = document.querySelector("#address").value;
+  if (amountLenght < 1) {
+    warning.innerHTML = "Enter amount";
+    warning.style.color = "red";
+    warning.style.marginLeft = "-1px";
+    warning.style.marginTop = "10px";
+    genBtn.style.backgroundColor = "grey";
+    genBtn.disabled = true;
+    warning.style.display = "block";
+    warning.style.textAlign = "start";
+  } else {
+    console.log(`${amountLenght} is greater than 3 perharps match`);
+  }
+  userAddressLenght = userAddress.toString().length;
+  if (userAddressLenght < 15) {
+    warning.style.display = "block";
+    warning.style.marginTop = "10px";
+    warning.innerHTML = "Invalid wallet address";
+    warning.style.color = "red";
+    warning.style.marginLeft = "-1px";
+    warning.style.textAlign = "start";
+    genBtn.style.backgroundColor = "grey";
+    genBtn.disabled = true;
+  }
 }
 function alertBox() {
   alert("Hello world to the user");
 }
-genBtn.addEventListener('click', function(){
+genBtn.addEventListener('click', function () {
   emptyBox();
 });

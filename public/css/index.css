@@ -123,24 +123,24 @@ div.form div.input-group span {
   font-weight: 500;
 }
 div.form div.input-group div.input span.warning {
-  font-size: .888rem;
+  font-size: 0.888rem;
   font-weight: 400;
   font-style: normal;
   text-align: start;
   color: red;
-  margin-top: -.1rem;
+  margin-top: -0.1rem;
   margin-right: -6rem;
   line-height: 18.8px;
   display: none;
 }
 
-div.box div.form div.input-address{
+div.box div.form div.input-address {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5px 2px;
 }
-div.box div.form div.input-address input[type=text]{
+div.box div.form div.input-address input[type="text"] {
   width: 35vw;
   height: 3rem;
   border: none;
@@ -204,7 +204,46 @@ div.ads div.ads-set div.ads-box img {
 
 /* Payment style */
 
-div.prompt-box {
+div.paybox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 28%;
+  background-color: #9f9da0;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+div.paybox div.box {
+  padding: 16px;
+  background-color: #f3f3f3;
+  color: #011b33;
+  font-size: 14px;
+  font-weight: 400;
+}
+div.paybox div.box span {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #343c43;
+  text-transform: uppercase;
+}
+div.paybox div.box p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 20px;
+  padding: 5px 0px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+/* div.prompt-box {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -231,7 +270,7 @@ div.prompt div.form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* spinner load */
 div.payment-page .lds-spinner {
