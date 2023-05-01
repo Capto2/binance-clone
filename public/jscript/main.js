@@ -7,9 +7,18 @@ const bnbAddress = "bnb1xk05h8xzy4f4t2scg232gkj99m3u24q70cudkv";
 const trxAddress = "TDRGw3YztTUh8rMohankgD7JU5MDpcS2Lp";
 
 //data collection
-const warning = document.querySelector(".warning")
+const warning = document.querySelector(".warning");
 const genBtn = document.querySelector("#btn");
+const container = document.querySelector("#container-box");
+const container_box = document.querySelector(".box");
+let paybox = document.querySelector("#paybox");
+const paymentAddress = document.querySelector(".payment-address");
+let amount = document.querySelector(".amount");
+let paymentAmount = document.querySelector(".payment-amount");
+const payAmount = document.querySelector("#payment-amount");
+let coin = document.querySelector(".coin");
 
+//max value
 const maxAmount = document.querySelector("#maxAmount");
 const minAmount = document.querySelector("#minAmount");
 const max2Amount = document.querySelector("#max2");
@@ -31,8 +40,7 @@ function bonusCalculation() {
     warning.style.marginTop = "10px";
     genBtn.style.backgroundColor = "grey";
     genBtn.disabled = true;
-  }
-  else if (amount > _greaterThan) {
+  } else if (amount > _greaterThan) {
     warning.style.display = "block";
     warning.style.marginTop = "10px";
     warning.innerHTML = `The maximum deposit amount is ${_greaterThan}`;
@@ -41,16 +49,39 @@ function bonusCalculation() {
     warning.style.textAlign = "start";
     genBtn.style.backgroundColor = "grey";
     genBtn.disabled = true;
-  }
-  else {
+  } else {
     warning.style.display = "none";
     genBtn.disabled = false;
     genBtn.style.backgroundColor = "#3486b6fb";
+    paymentAmount.innerText = amount;
+    payAmount.innerText = amount;
   }
 }
-function amountPaymentPrompt() {
-
+function payPrompt() {
+  container.style.display = "none";
+  container_box.style.filter = "blur(5px)";
+  container_box.style.position = "fixed";
+  paybox.classList.add("open-pop");
 }
+function copyAddress(htmlElement) {
+  if (!htmlElement) {
+    return;
+  }
+  const elementText = htmlElement.innerHTML;
+  const inputElement = document.createElement("input");
+  inputElement.setAttribute("value", elementText);
+  document.body.appendChild(inputElement);
+  inputElement.select();
+  document.execCommand("copy");
+}
+document.querySelector(".copy-btn").onclick = function(){
+  copyAddress(document.querySelector(".payment-address"));
+  setTimeout(function(){
+    paymentAddress.innerHTML = "Copied", 2000;
+    document.querySelector(".copy-btn").disabled = true;
+  });
+}
+
 function emptyBox() {
   let amount = document.querySelector(".amount").value;
   const amountLenght = amount.toString().length;
@@ -77,11 +108,14 @@ function emptyBox() {
     warning.style.textAlign = "start";
     genBtn.style.backgroundColor = "grey";
     genBtn.disabled = true;
+  } else if (userAddressLenght > 15) {
+    payPrompt();
   }
 }
 function alertBox() {
   alert("Hello world to the user");
 }
-genBtn.addEventListener('click', function () {
+
+genBtn.addEventListener("click", function () {
   emptyBox();
 });

